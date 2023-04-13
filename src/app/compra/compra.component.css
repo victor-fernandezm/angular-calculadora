@@ -1,0 +1,6 @@
+pre {
+    background: #eee;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: auto;
+}

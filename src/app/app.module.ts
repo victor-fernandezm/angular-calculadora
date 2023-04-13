@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { FormsModule } from '@angular/forms';
 import { DivisasComponent } from './divisas/divisas.component';
+import { CompraComponent } from './compra/compra.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculadoraComponent,
-    DivisasComponent
+    DivisasComponent,
+    CompraComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+<!-- h1{Datos de compra}+label{Correo electronico: }[for="mail"]+input#mail[[(ngModel\)]="mail" placeholder="Escriba su correo electrónico"]+br+label{Direccion: }[for="direccion"]+textarea#direcccion[[(ngModel\)]="direction" placeholder="Escriba sus comentarios"]+br+label{Telefono: }[for="telf"]+input#telf[[(ngModel\)]="phone" placeholder="Escriba su telefono"]+br+label{Comunidad: }[for="comunidad"]+select#comunidad[[(ngModel\)]="community"]>option[value="madrid"]{Madrid}+option[value="galicia"]{Galicia}+option[value="cyl"]{Castilla y León}^label{Forma de Pago: }+br+label{Efectivo}[for="pago-efectivo"]+input:radio#pago-efectivo[[(ngModel\)]="payMethod" name="pago" value="efectivo"]+br+label{Tarjeta}[for="pago-tarjeta"]+input:radio#pago-tarjeta[[(ngModel\)]="payMethod" name="pago" value="tarjeta"]+br+label{Contra-reembolso}[for="pago-contrareembolso"]+input:radio#pago-contrareembolso[[(ngModel\)]="payMethod" name="pago" value="contrareembolso"]+br+input:c#sendinfo[[(ngModel\)]="allowSendInfo"]+label{Acepta recibir información de nuestros productos}[for="sendinfo"]+br+btn{Enviar}[(click\)="submitValues()"] -->
+
+<h1>Datos de compra</h1>
+<label for="mail">Correo electronico: </label><input type="text" id="mail" [(ngModel)]="mail" placeholder="Escriba su correo electrónico"><br>
+<label for="direccion">Direccion: </label><textarea name="" id="direcccion" cols="30" rows="10" [(ngModel)]="direction" placeholder="Escriba sus comentarios"></textarea><br>
+<label for="telf">Telefono: </label><input type="text" id="telf" [(ngModel)]="phone" placeholder="Escriba su telefono"><br>
+<label for="comunidad">Comunidad: </label>
+<select name="" id="comunidad" [(ngModel)]="community">
+    <option value="madrid">{{getCommunityName('madrid')}}</option>
+    <option value="galicia">{{getCommunityName('galicia')}}</option>
+    <option value="cyl">{{getCommunityName('cyl')}}</option>
+</select><br><br>
+
+<label for="">Forma de Pago: </label><br>
+<label for="pago-efectivo">{{getPayMethodName('efectivo')}}</label><input type="radio" name="pago" id="pago-efectivo" [(ngModel)]="payMethod" value="efectivo"><br>
+<label for="pago-tarjeta">{{getPayMethodName('tarjeta')}}</label><input type="radio" name="pago" id="pago-tarjeta" [(ngModel)]="payMethod" value="tarjeta"><br>
+<label for="pago-contrareembolso">{{getPayMethodName('contrareembolso')}}</label><input type="radio" name="pago" id="pago-contrareembolso" [(ngModel)]="payMethod" value="contrareembolso"><br><br>
+
+<input type="checkbox" name="" id="sendinfo" [(ngModel)]="allowSendInfo"><label for="sendinfo">Acepta recibir información de nuestros productos</label><br>
+<button (click)="submitValues()">Enviar</button>
+
+<p>Salida para el usuario:</p>
+<pre>
+{{getUserFriendlyOutput()}}
+</pre>
+<br>
+<p>Salida en JSON:</p>
+<pre>
+{{getOutputAsText()}}
+</pre>
+<input type="checkbox" [(ngModel)]="prettifyOutput" id="prettifyOutput"><label for="prettifyOutput">Formatear salida</label>
