@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { FormsModule } from '@angular/forms';
+import { DivisasComponent } from './divisas/divisas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalculadoraComponent
+    CalculadoraComponent,
+    DivisasComponent
   ],
   imports: [
     BrowserModule,

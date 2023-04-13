@@ -1,0 +1,10 @@
+<label for="amount">Cantidad a convertir a euros: </label><input type="number" name="" id="amount" [(ngModel)]="amount" (input)="updateResult()"><br>
+<label>Divisa de origen: </label>
+<select [(ngModel)]="currency" (change)="updateResult()">
+    <option value="usd">Dólares ({{getSymbolForCurrency("usd")}})</option>
+    <option value="gbp">Libras ({{getSymbolForCurrency("gbp")}})</option>
+    <option value="cad">Dólares Canadienses ({{getSymbolForCurrency("cad")}})</option>
+    <option value="jpy">Yen Japonés ({{getSymbolForCurrency("jpy")}})</option>
+    <option value="err">NOEXISTE ({{getSymbolForCurrency("err")}})</option>
+</select>
+<p>{{amount}} {{currencySymbol}} son {{result}} €</p>
