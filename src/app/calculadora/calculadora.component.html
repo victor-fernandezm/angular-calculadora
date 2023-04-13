@@ -1,0 +1,7 @@
+<label for="">Numero 1</label><input type="number" name="" id="" [(ngModel)]="number1"><br>
+<label for="">Numero 2</label><input type="number" name="" id="" [(ngModel)]="number2"><br><br>
+<button (click)="onClickOperacion('+')">Sumar</button>
+<button (click)="onClickOperacion('-')">Restar</button>
+<button (click)="onClickOperacion('*')">Multiplicar</button>
+<button (click)="onClickOperacion('/')">Dividir</button><br>
+<p>El resultado es: {{result}}</p>
