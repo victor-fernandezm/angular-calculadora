@@ -6,12 +6,6 @@ import { Component } from '@angular/core';
 	styleUrls: ['./compra.component.css']
 })
 export class CompraComponent {
-	mail: string = "";
-	direction: string = "";
-	phone: string = "";
-	community: string = "madrid";
-	payMethod: string = "";
-	allowSendInfo: boolean = false;
 	prettifyOutput: boolean = false;
 
 	output = {
@@ -22,15 +16,6 @@ export class CompraComponent {
 		"payMethod": "",
 		"allowSendInfo": false
 	};
-
-	submitValues(): void {
-		this.output.mail = this.mail;
-		this.output.direction = this.direction;
-		this.output.phone = this.phone;
-		this.output.community = this.community;
-		this.output.payMethod = this.payMethod;
-		this.output.allowSendInfo = this.allowSendInfo;
-	}
 
 	private generatePrettyJSONString(data: Object): string {
 		let str: string = "{\n";
